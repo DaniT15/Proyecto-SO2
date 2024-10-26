@@ -12,15 +12,15 @@ import java.util.Random;
  */
 public class Personajes {
     
-    protected int id;
-    protected String nombre;
-    protected boolean puntosVida;
-    protected boolean fuerza;
-    protected boolean habilidades;
-    protected boolean agilidad;
-    protected int puntos;
-    protected int prioridad;
-    protected int contadorinanicion;
+    private int id;
+    private String nombre;
+    private boolean puntosVida;
+    private boolean fuerza;
+    private boolean habilidades;
+    private boolean agilidad;
+    private int puntos;
+    private int prioridad;
+    private int contadorinanicion;
     
     public Personajes(int id, String nombre){
         this.id = id;
@@ -89,6 +89,12 @@ public class Personajes {
         System.out.println("PUNTOS TOTALES: " + this.puntos);
         System.out.println("PRIORIDAD: " + this.prioridad);
     }
+    
+    @Override
+    public String toString() {
+        return "Personaje [ID=" + this.id + ", Name=" + this.nombre + "]";
+    }
+    
 
     public int getId() {
         return id;

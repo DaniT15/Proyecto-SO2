@@ -4,6 +4,7 @@
  */
 package proyecto.so2;
 
+import Clases.ColasPrioridad;
 import Clases.Personajes;
 
 /**
@@ -17,15 +18,11 @@ public class ProyectoSO2 {
      */
     public static void main(String[] args) {
         
-        Personajes personaje1 = new Personajes(1, "Han Solo");
-        Personajes personaje2 = new Personajes(2, "Obiwan Kenobi");
-        Personajes personaje3 = new Personajes(3, "Luke Skywalker");
-        Personajes personaje4 = new Personajes(4, "Leia");
+        ColasPrioridad colas = new ColasPrioridad();
         
-        personaje1.evaluarPrioridad();
-        personaje2.evaluarPrioridad();
-        personaje3.evaluarPrioridad();
-        personaje4.evaluarPrioridad();
+        colas.personajesStartrek();
+        colas.personajesStarwars();
+        
         
     }
     
