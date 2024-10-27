@@ -5,6 +5,9 @@
 package Clases;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -24,28 +27,62 @@ public class ColasPrioridad {
     Queue<Personajes> colaRefuerzoStartrek = new LinkedList<>();;
   
     //Crea los personajes y los mete a la cola de refuerzo
-    public void personajesStarwars(){
+    
+    public static String[] cargarPersonajes(String nombreArchivo, int numPersonajes) {
+        String[] personajes = new String[numPersonajes];
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo));
+            String line;
+            int i = 0;
+            while ((line = reader.readLine()) != null && i < numPersonajes) {
+                personajes[i] = line;
+                i++;
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return personajes;
+    }
+    
+    
+    public void personajesStarwars(){    
         int nmrpersonajes1 = 20;
+        String[] personajesArray = cargarPersonajes("Personajes Star Wars.txt", nmrpersonajes1);
+        Queue<Personajes> colaRefuerzoStarwars = new LinkedList<>();
         
-        //Aqui debe ir las logica de creacion de los personajes sacados del txt!
-        for(int i = 0; i< nmrpersonajes1; i++){
-            Personajes personaje1 = new Personajes(1, "Han Solo "+i);
+        for (int i = 0; i < nmrpersonajes1; i++) {
+            String[] partes = personajesArray[i].split(", ");
+            int id = Integer.parseInt(partes[0]);
+            String nombre = partes[1];
+            String imagen = partes[2];
+            Personajes personaje1 = new Personajes(id, nombre, imagen);
             personaje1.evaluarPrioridad();
             colaRefuerzoStarwars.add(personaje1);
         }
+        System.out.println("******************************************");
+        System.out.println("Se han cargado todos los personajes de SW");
+        System.out.println("******************************************");
     }
     
      //Crea los personajes y los mete a la cola de refuerzo
      public void personajesStartrek(){
         int nmrpersonajes2 = 20;
+        String[] personajesArray = cargarPersonajes("Personajes Star Trek.txt", nmrpersonajes2);
+        Queue<Personajes> colaRefuerzoStartrek = new LinkedList<>();
         
-        //Aqui debe ir las logica de creacion de los personajes sacados del txt!
-        for(int i = 0; i< nmrpersonajes2; i++){
-            Personajes personaje2 = new Personajes(1, "Spok "+i);
-            personaje2.evaluarPrioridad(); 
+        for (int i = 0; i < nmrpersonajes2; i++) {
+            String[] partes = personajesArray[i].split(", ");
+            int id = Integer.parseInt(partes[0]);
+            String nombre = partes[1];
+            String imagen = partes[2];
+            Personajes personaje2 = new Personajes(id, nombre, imagen);
+            personaje2.evaluarPrioridad();
             colaRefuerzoStartrek.add(personaje2);
         }
-        
+        System.out.println("******************************************");
+        System.out.println("Se han cargado todos los personajes de ST");
+        System.out.println("******************************************");
     }
      
    // Hace print a la cola que pases por argumento
@@ -60,25 +97,14 @@ public class ColasPrioridad {
 
     // Hace print a todas las colas
     public void printColas() {
-        System.out.println("");
-        System.out.println("*********************************");
         printCola(cola1Starwars, "Cola 1 Starwars");
-        System.out.println("");
         printCola(cola2Starwars, "Cola 2 Starwars");
-        System.out.println("");
         printCola(cola3Starwars, "Cola 3 Starwars");
-        System.out.println("");
         printCola(colaRefuerzoStarwars, "Cola Refuerzo Starwars");
-        System.out.println("");
         printCola(cola1Startrek, "Cola 1 Startrek");
-        System.out.println("");
         printCola(cola2Startrek, "Cola 2 Startrek");
-        System.out.println("");
         printCola(cola3Startrek, "Cola 3 Startrek");
-        System.out.println("");
         printCola(colaRefuerzoStartrek, "Cola Refuerzo Startrek");
-        System.out.println("*********************************");
-        System.out.println("");
     }
 
     public Queue<Personajes> getCola1Starwars() {
