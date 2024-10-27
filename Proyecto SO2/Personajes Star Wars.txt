@@ -1,20 +1,20 @@
-1, Anakin Skywalker
-2, Luke Skywalker
-3, Leia Organa
-4, Darth Vader
-5, Obi-Wan Kenobi
-6, Yoda
-7, Han Solo
-8, Chewbacca
-9, Rey
-10, Finn
-11, Poe Dameron
-12, Kylo Ren
-13, Ahsoka Tano
-14, BB-8
-15, C-3PO
-16, Darth Maul
-17, Emperor Palpatine
-18, Boba Fett
-19, StormTrooper
-20, R2-D2
+1, Anakin Skywalker, src//Imagenes//Anakin Skywalker.png
+2, Luke Skywalker, src//Imagenes//Luke Skywalker.png
+3, Leia Organa, src//Imagenes//Leia Organa.png
+4, Darth Vader, src//Imagenes//Darth Vader.png
+5, Obi-Wan Kenobi, src//Imagenes//Obi-Wan Kenobi.png
+6, Yoda, src//Imagenes//Yoda.png
+7, Han Solo, src//Imagenes//Han Solo.png
+8, Chewbacca, src//Imagenes//Chewbacca.png
+9, Rey, src//Imagenes//Rey.png
+10, Finn, src//Imagenes//Finn.png
+11, Poe Dameron, src//Imagenes//Poe Dameron.png
+12, Kylo Ren, src//Imagenes//Kylo Ren.png
+13, Ahsoka Tano, src//Imagenes//Ahsoka Tano.png
+14, BB-8, src//Imagenes//BB-8.png
+15, C-3PO, src//Imagenes//C-3PO.png
+16, Darth Maul, src//Imagenes//Darth Maul.png
+17, Emperor Palpatine, src//Imagenes//Emperor Palpatine.png
+18, Boba Fett, src//Imagenes//Boba Fett.png
+19, StormTrooper, src//Imagenes//StormTrooper.png
+20, R2-D2, src//Imagenes//R2-D2.png

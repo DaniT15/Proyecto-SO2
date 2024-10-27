@@ -1,23 +1,23 @@
-1, James T. Kirk
-2, Spock
-3, Leonard McCoy
-4, Jean-Luc Picard
-5, Data
-6, Worf
-7, Deanna Troi
-8, Beverly Crusher
-9, Geordi La Forge
-10, Riker
-11, Q
-12, Wesley Crusher
-13, Chakotay
-14, Sulu
-15, Uhura
-16, Scotty
-17, Odo
-18, Kira Nerys
-19, Benjamin Sisko
-20, Seven of Nine
+1, James T. Kirk, src//Imagenes//Kirk.png
+2, Spock, src//Imagenes//Spock.png
+3, Leonard McCoy, src//Imagenes//Leonard McCoy.png
+4, Jean-Luc Picard, src//Imagenes//Jean-Luc Picard.png
+5, Data, src//Imagenes//Data.png
+6, Worf, src//Imagenes//Worf.png
+7, Deanna Troi, src//Imagenes//Deanna Troi.png
+8, Beverly Crusher, src//Imagenes//Beverly Crusher.png
+9, Geordi La Forge, src//Imagenes//Geordi La Forge.png
+10, Riker, src//Imagenes//Riker.png
+11, Q, src//Imagenes//Q.png
+12, Wesley Crusher, src//Imagenes//Wesley Crusher.png
+13, Chakotay, src//Imagenes//Chakotay.png
+14, Sulu, src//Imagenes//Sulu.png
+15, Uhura, src//Imagenes//Uhura.png
+16, Scotty, src//Imagenes//Scotty.png
+17, Odo, src//Imagenes//Odo.png
+18, Kira Nerys, src//Imagenes//Kira Nerys.png
+19, Benjamin Sisko, src//Imagenes//Benjamin Sisko.png
+20, Seven of Nine, src//Imagenes//Seven of Nine.png
 
 
 
