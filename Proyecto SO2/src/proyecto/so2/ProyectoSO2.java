@@ -4,6 +4,7 @@
  */
 package proyecto.so2;
 
+import Clases.Administrador;
 import Clases.ColasPrioridad;
 import Clases.IA;
 
@@ -16,54 +17,36 @@ public class ProyectoSO2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
         ColasPrioridad colas = new ColasPrioridad();
         
         IA ia = new IA();
         
+        Administrador admin = new Administrador();
+        
         colas.personajesStartrek();
         colas.personajesStarwars();
         
-         System.out.println("");
-         System.out.println("***********************************");
-         ia.combate(colas);
-         System.out.println("");
-         colas.printColas();
-         System.out.println("***********************************");
-         System.out.println("");
-         
-         System.out.println("");
-         System.out.println("***********************************");
-         ia.combate(colas);
-         System.out.println("");
-         colas.printColas();
-         System.out.println("***********************************");
-        System.out.println("");
+
+        admin.asignacion(colas);
         
-        System.out.println("");
-         System.out.println("***********************************");
-         ia.combate(colas);
-         System.out.println("");
-         colas.printColas();
-         System.out.println("***********************************");
-         System.out.println("");
-         
-         System.out.println("");
-         System.out.println("***********************************");
-         ia.combate(colas);
-         System.out.println("");
-         colas.printColas();
-         System.out.println("***********************************");
-        System.out.println("");
+        for(int i = 0; i < 2; i++){
+            admin.ejecucionPelea(colas, ia);
         
-        System.out.println("");
-         System.out.println("***********************************");
-         System.out.println(ia.getGanadoresStartrek());
-         System.out.println(ia.getGanadoresStarwars());
-         System.out.println("***********************************");
-        System.out.println("");
+            colas.printColas();
+        }
         
+        ia.cambiarTiempoCombate(1);
+        
+        for(int i = 0; i < 15; i++){
+            admin.ejecucionPelea(colas, ia);
+        
+            colas.printColas();
+        }
+        
+        
+       
     }
     
 }
