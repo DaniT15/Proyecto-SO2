@@ -11,10 +11,10 @@
 11, Poe Dameron
 12, Kylo Ren
 13, Ahsoka Tano
-14, Ezra Bridger
-15, Sabine Wren
+14, BB-8
+15, C-3PO
 16, Darth Maul
 17, Emperor Palpatine
 18, Boba Fett
-19, Lando Calrissian
-20, Grogu (The Child)
+19, StormTrooper
+20, R2-D2
