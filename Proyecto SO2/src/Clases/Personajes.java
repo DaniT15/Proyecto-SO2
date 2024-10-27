@@ -23,7 +23,7 @@ public class Personajes {
     private int prioridad;
     private int contadorinanicion;
     
-    public Personajes(int id, String nombre){
+    public Personajes(int id, String nombre, String imagen){
         this.id = id;
         this.nombre = nombre;
         this.imagen = imagen;
@@ -92,21 +92,21 @@ public class Personajes {
         System.out.println("Agilidad de calidad: " + this.agilidad);
         System.out.println("PUNTOS TOTALES: " + this.puntos);
         System.out.println("PRIORIDAD: " + this.prioridad);
+        System.out.println("Imagen: " + this.imagen);
     }
     
     @Override
     public String toString() {
-    //    return "Personaje [ID =" + this.id + ", Name =" + this.nombre + ",Imagen =" + this.imagen + "]"; Queda comentado mientras hago las imagenes
-        return "Personaje [ID =" + this.id + ", Name =" + this.nombre + "]";
+        return "Personaje [ID =" + this.id + ", Name =" + this.nombre + ",Imagen =" + this.imagen + "]"; 
     }
 
-    //public String getImagen() {
-    //    return imagen;
-    //}
+    public String getImagen() {
+        return imagen;
+    }
 
-    //public void setImagen(String imagen) {
-    //    this.imagen = imagen;
-    //}
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 
     public int getId() {
         return id;

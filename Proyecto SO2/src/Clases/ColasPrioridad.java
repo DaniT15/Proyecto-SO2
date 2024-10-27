@@ -55,8 +55,8 @@ public class ColasPrioridad {
             String[] partes = personajesArray[i].split(", ");
             int id = Integer.parseInt(partes[0]);
             String nombre = partes[1];
-        //    String imagen = partes[2];
-            Personajes personaje1 = new Personajes(id, nombre);
+            String imagen = partes[2];
+            Personajes personaje1 = new Personajes(id, nombre, imagen);
             personaje1.evaluarPrioridad();
             colaRefuerzoStarwars.add(personaje1);
         }
@@ -75,7 +75,8 @@ public class ColasPrioridad {
             String[] partes = personajesArray[i].split(", ");
             int id = Integer.parseInt(partes[0]);
             String nombre = partes[1];
-            Personajes personaje2 = new Personajes(id, nombre);
+            String imagen = partes[2];
+            Personajes personaje2 = new Personajes(id, nombre, imagen);
             personaje2.evaluarPrioridad();
             colaRefuerzoStartrek.add(personaje2);
         }
