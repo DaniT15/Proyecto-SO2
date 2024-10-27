@@ -1,0 +1,34 @@
+1, James T. Kirk
+2, Spock
+3, Leonard McCoy
+4, Jean-Luc Picard
+5, Data
+6, Worf
+7, Deanna Troi
+8, Beverly Crusher
+9, Geordi La Forge
+10, Riker
+11, Q
+12, Wesley Crusher
+13, Tasha Yar
+14, Sulu
+15, Uhura
+16, Scotty
+17, Odo
+18, Kira Nerys
+19, Benjamin Sisko
+20, Seven of Nine
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
