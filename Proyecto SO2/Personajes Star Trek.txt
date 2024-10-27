@@ -10,7 +10,7 @@
 10, Riker
 11, Q
 12, Wesley Crusher
-13, Tasha Yar
+13, Chakotay
 14, Sulu
 15, Uhura
 16, Scotty
@@ -18,7 +18,6 @@
 18, Kira Nerys
 19, Benjamin Sisko
 20, Seven of Nine
-
 
 
 
