@@ -1,0 +1,20 @@
+1, Anakin Skywalker
+2, Luke Skywalker
+3, Leia Organa
+4, Darth Vader
+5, Obi-Wan Kenobi
+6, Yoda
+7, Han Solo
+8, Chewbacca
+9, Rey
+10, Finn
+11, Poe Dameron
+12, Kylo Ren
+13, Ahsoka Tano
+14, BB-8
+15, C-3PO
+16, Darth Maul
+17, Emperor Palpatine
+18, Boba Fett
+19, StormTrooper
+20, R2-D2
