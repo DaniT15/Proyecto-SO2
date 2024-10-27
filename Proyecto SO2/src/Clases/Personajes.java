@@ -69,6 +69,7 @@ public class Personajes {
             this.agilidad = true;
         }else{}
         
+        
         if(puntos <= 25){
             this.prioridad = 3;
         }
@@ -94,10 +95,21 @@ public class Personajes {
     public String toString() {
         return "Personaje [ID=" + this.id + ", Name=" + this.nombre + "]";
     }
-    
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public boolean isPuntosVida() {
@@ -140,27 +152,6 @@ public class Personajes {
         this.puntos = puntos;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public boolean getPuntosVida() {
-        return puntosVida;
-    }
-
-    public boolean getFuerza() {
-        return fuerza;
-    }
-
-
     public int getPrioridad() {
         return prioridad;
     }
@@ -176,6 +167,8 @@ public class Personajes {
     public void setContadorinanicion(int contadorinanicion) {
         this.contadorinanicion = contadorinanicion;
     }
+    
+
    
     
 }

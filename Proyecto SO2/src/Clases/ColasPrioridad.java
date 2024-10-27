@@ -25,8 +25,9 @@ public class ColasPrioridad {
   
     //Crea los personajes y los mete a la cola de refuerzo
     public void personajesStarwars(){
-        int nmrpersonajes1 = 10;
+        int nmrpersonajes1 = 5;
         
+        //Aqui debe ir las logica de creacion de los personajes sacados del txt!
         for(int i = 0; i< nmrpersonajes1; i++){
             Personajes personaje1 = new Personajes(1, "Han Solo "+i);
             personaje1.evaluarPrioridad();
@@ -36,11 +37,12 @@ public class ColasPrioridad {
     
      //Crea los personajes y los mete a la cola de refuerzo
      public void personajesStartrek(){
-        int nmrpersonajes2 = 10;
+        int nmrpersonajes2 = 5;
         
+        //Aqui debe ir las logica de creacion de los personajes sacados del txt!
         for(int i = 0; i< nmrpersonajes2; i++){
             Personajes personaje2 = new Personajes(1, "Spok "+i);
-            personaje2.evaluarPrioridad();
+            personaje2.evaluarPrioridad(); 
             colaRefuerzoStartrek.add(personaje2);
         }
         

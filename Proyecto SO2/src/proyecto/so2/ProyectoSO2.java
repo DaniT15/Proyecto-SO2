@@ -5,7 +5,7 @@
 package proyecto.so2;
 
 import Clases.ColasPrioridad;
-import Clases.Personajes;
+import Clases.IA;
 
 /**
  *
@@ -20,9 +20,49 @@ public class ProyectoSO2 {
         
         ColasPrioridad colas = new ColasPrioridad();
         
+        IA ia = new IA();
+        
         colas.personajesStartrek();
         colas.personajesStarwars();
         
+         System.out.println("");
+         System.out.println("***********************************");
+         ia.combate(colas);
+         System.out.println("");
+         colas.printColas();
+         System.out.println("***********************************");
+         System.out.println("");
+         
+         System.out.println("");
+         System.out.println("***********************************");
+         ia.combate(colas);
+         System.out.println("");
+         colas.printColas();
+         System.out.println("***********************************");
+        System.out.println("");
+        
+        System.out.println("");
+         System.out.println("***********************************");
+         ia.combate(colas);
+         System.out.println("");
+         colas.printColas();
+         System.out.println("***********************************");
+         System.out.println("");
+         
+         System.out.println("");
+         System.out.println("***********************************");
+         ia.combate(colas);
+         System.out.println("");
+         colas.printColas();
+         System.out.println("***********************************");
+        System.out.println("");
+        
+        System.out.println("");
+         System.out.println("***********************************");
+         System.out.println(ia.getGanadoresStartrek());
+         System.out.println(ia.getGanadoresStarwars());
+         System.out.println("***********************************");
+        System.out.println("");
         
     }
     
