@@ -14,6 +14,7 @@ public class Personajes {
     
     private int id;
     private String nombre;
+    private String imagen;
     private boolean puntosVida;
     private boolean fuerza;
     private boolean habilidades;
@@ -22,9 +23,10 @@ public class Personajes {
     private int prioridad;
     private int contadorinanicion;
     
-    public Personajes(int id, String nombre){
+    public Personajes(int id, String nombre, String imagen){
         this.id = id;
         this.nombre = nombre;
+        this.imagen = imagen;
         this.puntosVida = false;
         this.fuerza = false;
         this.habilidades = false;
@@ -82,6 +84,7 @@ public class Personajes {
         
         //prints de prueba
         System.out.println("");
+        System.out.println("ID: "+ this.id);
         System.out.println("Estadisticas de: "+ this.nombre);
         System.out.println("Fueza de calidad: " + this.fuerza);
         System.out.println("Puntos de vida de calidad: " + this.puntosVida);
@@ -89,6 +92,7 @@ public class Personajes {
         System.out.println("Agilidad de calidad: " + this.agilidad);
         System.out.println("PUNTOS TOTALES: " + this.puntos);
         System.out.println("PRIORIDAD: " + this.prioridad);
+        System.out.println("Imagen: " + this.imagen);
     }
     
     @Override
@@ -110,6 +114,14 @@ public class Personajes {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public boolean isPuntosVida() {
