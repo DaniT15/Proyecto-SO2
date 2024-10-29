@@ -48,7 +48,6 @@ public class ColasPrioridad {
     public void personajesStarwars(){
         int nmrpersonajes1 = 20;
         String[] personajesArray = cargarPersonajes("Personajes Star Wars.txt", nmrpersonajes1);
-        Queue<Personajes> colaRefuerzoStarwars = new LinkedList<>();
         
         for (int i = 0; i < nmrpersonajes1; i++) {
             String[] partes = personajesArray[i].split(", ");
@@ -68,7 +67,6 @@ public class ColasPrioridad {
      public void personajesStartrek(){
         int nmrpersonajes2 = 20;
         String[] personajesArray = cargarPersonajes("Personajes Star Trek.txt", nmrpersonajes2);
-        Queue<Personajes> colaRefuerzoStartrek = new LinkedList<>();
         
         for (int i = 0; i < nmrpersonajes2; i++) {
             String[] partes = personajesArray[i].split(", ");

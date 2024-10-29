@@ -52,8 +52,6 @@ public class Administrador {
     
     public void ejecucionPelea(ColasPrioridad cola, IA ia) throws InterruptedException{
         
-        cicloRevision( cola);
-        
         Personajes personaje1 = null;
         Personajes personaje2 = null;
         
@@ -98,6 +96,7 @@ public class Administrador {
                     cola.colaRefuerzoStartrek.add(personajeCambio2);}
             }else{}
         
+        cicloRevision( cola);
     }
     
     public void cicloRevision(ColasPrioridad cola){
@@ -111,11 +110,11 @@ public class Administrador {
                 this.ciclosDeRevision = 0;
                 this.ciclosDeRevisionTotales += 1;
 
-                Personajes personaje1 = new Personajes(this.ciclosDeRevisionTotales + 80, "Han Solo" + this.ciclosDeRevisionTotales + 80);
+                Personajes personaje1 = new Personajes(this.ciclosDeRevisionTotales + 80, "Han Solo" + this.ciclosDeRevisionTotales + 80, "Han Solo.png");
                 personaje1.evaluarPrioridad();
                 cola.colaRefuerzoStarwars.add(personaje1);
 
-                Personajes personaje2 = new Personajes(this.ciclosDeRevisionTotales + 80, "Spok" + this.ciclosDeRevisionTotales + 80);
+                Personajes personaje2 = new Personajes(this.ciclosDeRevisionTotales + 80, "Spok" + this.ciclosDeRevisionTotales + 80, "Spock.png");
                 personaje1.evaluarPrioridad();
                 cola.colaRefuerzoStartrek.add(personaje2);
              }

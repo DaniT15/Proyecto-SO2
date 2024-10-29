@@ -28,7 +28,6 @@ public class ProyectoSO2 {
         colas.personajesStartrek();
         colas.personajesStarwars();
         
-
         admin.asignacion(colas);
         
         for(int i = 0; i < 2; i++){
