@@ -4,6 +4,7 @@
  */
 package Interfaz;
 
+import Clases.IA;
 import javax.accessibility.AccessibleContext;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -17,14 +18,28 @@ import javax.swing.JTextArea;
  * @author danie
  */
 public class Menu extends javax.swing.JFrame {
+
+    private IA ia;
     
     
 
     /**
      * Creates new form Menu
      */
-    public Menu() {
-        initComponents();
+    public Menu(IA ia) {
+       initComponents();
+
+        this.ia = ia; // Inicializa ia
+
+        // Limpia en jComboBox
+        jComboBox1.removeAllItems();
+
+        // anade los items al jComboBox
+        jComboBox1.addItem("2");
+        jComboBox1.addItem("5");
+        jComboBox1.addItem("7");
+        jComboBox1.addItem("10");
+        jComboBox1.addItem("15");
     }
 
     /**
@@ -81,7 +96,7 @@ public class Menu extends javax.swing.JFrame {
         VictoriasSW.setText("0");
         jPanel1.add(VictoriasSW, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 70, 50));
 
-        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +238,17 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+        try {
+        // Convert the selected value to an integer
+        int segundos = Integer.parseInt((String) jComboBox1.getSelectedItem());
+
+        // Update segundosPorCombate in the IA instance
+        ia.setSegundosPorCombate(segundos);
+
+        System.out.println("Segundos por combate actualizado a: " + ia.getSegundosPorCombate());
+    } catch (NumberFormatException e) {
+        System.out.println("Error: El valor seleccionado no es un número válido.");
+    }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
@@ -256,8 +281,9 @@ public class Menu extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            private IA ia;
             public void run() {
-                new Menu().setVisible(true);
+                new Menu(this.ia).setVisible(true);
             }
         });
     }

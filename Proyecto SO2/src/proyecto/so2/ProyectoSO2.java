@@ -28,20 +28,20 @@ public class ProyectoSO2 {
         colas.personajesStartrek();
         colas.personajesStarwars();
         
-        Menu frame = new Menu();
+        Menu frame = new Menu(ia);
         frame.setVisible(true);
         
         admin.asignacion(colas);
         
-        int contador = 20;
         
-        while(contador > 0){
         
+        
+        while((colas.getCola1Startrek().peek() != null || colas.getCola2Startrek().peek() != null || colas.getCola3Startrek().peek() != null || colas.getColaRefuerzoStartrek().peek() != null ) 
+                &&  (colas.getCola1Starwars().peek() != null || colas.getCola2Starwars().peek() != null || colas.getCola3Starwars().peek() != null || colas.getColaRefuerzoStarwars().peek() != null)){
             admin.ejecucionPelea(colas, ia, frame);
         
             colas.printColas();
-            
-            contador --;
+        
         }
     
     }

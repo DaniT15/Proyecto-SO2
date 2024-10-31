@@ -146,7 +146,7 @@ public class Administrador {
         frame.getVictoriasST().setText(String.valueOf(ia.victoriasStartrek));
         
         try {
-            Thread.sleep(2000); 
+            Thread.sleep(ia.segundosPorCombate*1000); 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -186,11 +186,11 @@ public class Administrador {
                 this.ciclosDeRevision = 0;
                 this.ciclosDeRevisionTotales += 1;
 
-                Personajes personaje1 = new Personajes(this.ciclosDeRevisionTotales + 80, "Han Solo" + this.ciclosDeRevisionTotales + 80, "Han Solo.png");
+                Personajes personaje1 = new Personajes(this.ciclosDeRevisionTotales + 80, "Han Solo", "/Imágenes/Han Solo.png");
                 personaje1.evaluarPrioridad();
                 cola.colaRefuerzoStarwars.add(personaje1);
 
-                Personajes personaje2 = new Personajes(this.ciclosDeRevisionTotales + 80, "Spok" + this.ciclosDeRevisionTotales + 80, "Spock.png");
+                Personajes personaje2 = new Personajes(this.ciclosDeRevisionTotales + 80, "Spok", "/Imágenes/Spock.png");
                 personaje1.evaluarPrioridad();
                 cola.colaRefuerzoStartrek.add(personaje2);
              }
