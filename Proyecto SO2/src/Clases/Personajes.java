@@ -72,13 +72,13 @@ public class Personajes {
         }else{}
         
         
-        if(puntos <= 25){
+        if(puntos <= 0){
             this.prioridad = 3;
         }
-        else if(puntos <= 75){
+        else if(puntos <= 50){
             this.prioridad = 2;
         }
-        else if(puntos == 100){
+        else if(puntos <= 100){
             this.prioridad = 1;
         }
         
@@ -97,7 +97,7 @@ public class Personajes {
     
     @Override
     public String toString() {
-        return "Personaje [ID=" + this.id + ", Name=" + this.nombre + ", Contador Inanicion=" + this.contadorinanicion + "]";
+        return "ID=" + this.id +", "+ this.nombre + ",  Inanicion=" + this.contadorinanicion;
     }
 
     public int getId() {

@@ -4,6 +4,14 @@
  */
 package Interfaz;
 
+import javax.accessibility.AccessibleContext;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRootPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author danie
@@ -29,23 +37,33 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        VictoriasST = new javax.swing.JLabel();
+        VictoriasSW = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        NombreSW = new javax.swing.JLabel();
+        ResultadoSW = new javax.swing.JLabel();
+        ResultadoST = new javax.swing.JLabel();
+        NombreST = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Cola1Starwars = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Cola2Starwars = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        Cola3Starwars = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        ColaRefuerzosStarwars = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        Cola1Startrek = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        Cola2Startrek = new javax.swing.JTextArea();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        Cola3Startrek = new javax.swing.JTextArea();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        ColaRefuerzosStartrek = new javax.swing.JTextArea();
+        DesicionCombate = new javax.swing.JLabel();
+        ImagenST = new javax.swing.JLabel();
+        ImagenSW = new javax.swing.JLabel();
+        EstadoIA = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,15 +71,15 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 700));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("0");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 165, 70, 50));
+        VictoriasST.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        VictoriasST.setForeground(new java.awt.Color(255, 255, 255));
+        VictoriasST.setText("0");
+        jPanel1.add(VictoriasST, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, 70, 50));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("0");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 165, 70, 50));
+        VictoriasSW.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        VictoriasSW.setForeground(new java.awt.Color(255, 255, 255));
+        VictoriasSW.setText("0");
+        jPanel1.add(VictoriasSW, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 70, 50));
 
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -72,73 +90,118 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 635, -1, -1));
 
-        jLabel3.setText("Imagen ST");
-        jLabel3.setPreferredSize(new java.awt.Dimension(200, 300));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 200, 300));
+        NombreSW.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NombreSW.setForeground(new java.awt.Color(255, 255, 255));
+        NombreSW.setText("Nombre SW");
+        jPanel1.add(NombreSW, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 560, 160, 35));
 
-        jLabel4.setText("Imagen SW");
-        jLabel4.setPreferredSize(new java.awt.Dimension(200, 300));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 200, 300));
+        ResultadoSW.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        ResultadoSW.setForeground(new java.awt.Color(255, 255, 255));
+        ResultadoSW.setText("Resultado SW");
+        jPanel1.add(ResultadoSW, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 130, 35));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Nombre SW");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 570, 100, 35));
+        ResultadoST.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        ResultadoST.setForeground(new java.awt.Color(255, 255, 255));
+        ResultadoST.setText("Resultado ST");
+        jPanel1.add(ResultadoST, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 130, 35));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Resultado SW");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 130, 35));
+        NombreST.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NombreST.setForeground(new java.awt.Color(255, 255, 255));
+        NombreST.setText("Nombre ST");
+        jPanel1.add(NombreST, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 560, 160, 35));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Resultado ST");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 130, 35));
+        Cola1Starwars.setBackground(new java.awt.Color(51, 51, 51));
+        Cola1Starwars.setColumns(20);
+        Cola1Starwars.setForeground(new java.awt.Color(255, 255, 255));
+        Cola1Starwars.setRows(5);
+        jScrollPane1.setViewportView(Cola1Starwars);
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Nombre ST");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 560, 100, 35));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 260, 100));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Cola 2 SW");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 260, 180, 110));
+        Cola2Starwars.setBackground(new java.awt.Color(51, 51, 51));
+        Cola2Starwars.setColumns(20);
+        Cola2Starwars.setForeground(new java.awt.Color(255, 255, 255));
+        Cola2Starwars.setRows(5);
+        Cola2Starwars.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane2.setViewportView(Cola2Starwars);
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Cola 3 SW");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 430, 180, 110));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 260, 100));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Refuerzo SW");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 587, 180, 110));
+        Cola3Starwars.setBackground(new java.awt.Color(51, 51, 51));
+        Cola3Starwars.setColumns(20);
+        Cola3Starwars.setForeground(new java.awt.Color(255, 255, 255));
+        Cola3Starwars.setRows(5);
+        Cola3Starwars.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane3.setViewportView(Cola3Starwars);
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Cola 1 ST");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 100, 180, 110));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 260, 100));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Cola 3 ST");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 430, 180, 110));
+        ColaRefuerzosStarwars.setBackground(new java.awt.Color(51, 51, 51));
+        ColaRefuerzosStarwars.setColumns(20);
+        ColaRefuerzosStarwars.setForeground(new java.awt.Color(255, 255, 255));
+        ColaRefuerzosStarwars.setRows(5);
+        ColaRefuerzosStarwars.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane4.setViewportView(ColaRefuerzosStarwars);
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Cola 2 ST");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 260, 180, 110));
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 590, 260, 100));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Refuerzo ST");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 587, 180, 110));
+        Cola1Startrek.setBackground(new java.awt.Color(51, 51, 51));
+        Cola1Startrek.setColumns(20);
+        Cola1Startrek.setForeground(new java.awt.Color(255, 255, 255));
+        Cola1Startrek.setRows(5);
+        Cola1Startrek.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane5.setViewportView(Cola1Startrek);
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Cola 1 SW");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 100, 180, 110));
+        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 100, 260, 100));
+
+        jScrollPane6.setBackground(new java.awt.Color(51, 51, 51));
+
+        Cola2Startrek.setBackground(new java.awt.Color(51, 51, 51));
+        Cola2Startrek.setColumns(20);
+        Cola2Startrek.setForeground(new java.awt.Color(255, 255, 255));
+        Cola2Startrek.setRows(5);
+        Cola2Startrek.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane6.setViewportView(Cola2Startrek);
+
+        jPanel1.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 260, 260, 100));
+
+        Cola3Startrek.setBackground(new java.awt.Color(51, 51, 51));
+        Cola3Startrek.setColumns(20);
+        Cola3Startrek.setForeground(new java.awt.Color(255, 255, 255));
+        Cola3Startrek.setRows(5);
+        Cola3Startrek.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane7.setViewportView(Cola3Startrek);
+
+        jPanel1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 440, 260, 100));
+
+        ColaRefuerzosStartrek.setBackground(new java.awt.Color(51, 51, 51));
+        ColaRefuerzosStartrek.setColumns(20);
+        ColaRefuerzosStartrek.setForeground(new java.awt.Color(255, 255, 255));
+        ColaRefuerzosStartrek.setRows(5);
+        ColaRefuerzosStartrek.setCaretColor(new java.awt.Color(51, 51, 51));
+        jScrollPane8.setViewportView(ColaRefuerzosStartrek);
+
+        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 590, 260, 100));
+
+        DesicionCombate.setBackground(new java.awt.Color(102, 102, 102));
+        DesicionCombate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        DesicionCombate.setForeground(new java.awt.Color(255, 255, 255));
+        DesicionCombate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DesicionCombate.setText("Desicion");
+        jPanel1.add(DesicionCombate, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 180, 30));
+
+        ImagenST.setText("ImagenST");
+        jPanel1.add(ImagenST, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, 200, 290));
+
+        ImagenSW.setText("ImagenSW");
+        jPanel1.add(ImagenSW, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 200, 290));
+
+        EstadoIA.setBackground(new java.awt.Color(102, 102, 102));
+        EstadoIA.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        EstadoIA.setForeground(new java.awt.Color(255, 255, 255));
+        EstadoIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EstadoIA.setText("ESTADO DE LA IA");
+        jPanel1.add(EstadoIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 240, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Fondo proy.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -200,24 +263,273 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea Cola1Startrek;
+    private javax.swing.JTextArea Cola1Starwars;
+    private javax.swing.JTextArea Cola2Startrek;
+    private javax.swing.JTextArea Cola2Starwars;
+    private javax.swing.JTextArea Cola3Startrek;
+    private javax.swing.JTextArea Cola3Starwars;
+    private javax.swing.JTextArea ColaRefuerzosStartrek;
+    private javax.swing.JTextArea ColaRefuerzosStarwars;
+    private javax.swing.JLabel DesicionCombate;
+    private javax.swing.JLabel EstadoIA;
+    private javax.swing.JLabel ImagenST;
+    private javax.swing.JLabel ImagenSW;
+    private javax.swing.JLabel NombreST;
+    private javax.swing.JLabel NombreSW;
+    private javax.swing.JLabel ResultadoST;
+    private javax.swing.JLabel ResultadoSW;
+    private javax.swing.JLabel VictoriasST;
+    private javax.swing.JLabel VictoriasSW;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     // End of variables declaration//GEN-END:variables
+
+    public JTextArea getCola1Startrek() {
+        return Cola1Startrek;
+    }
+
+    public void setCola1Startrek(JTextArea Cola1Startrek) {
+        this.Cola1Startrek = Cola1Startrek;
+    }
+
+    public JTextArea getCola1Starwars() {
+        return Cola1Starwars;
+    }
+
+    public void setCola1Starwars(JTextArea Cola1Starwars) {
+        this.Cola1Starwars = Cola1Starwars;
+    }
+
+    public JTextArea getCola2Startrek() {
+        return Cola2Startrek;
+    }
+
+    public void setCola2Startrek(JTextArea Cola2Startrek) {
+        this.Cola2Startrek = Cola2Startrek;
+    }
+
+    public JTextArea getCola2Starwars() {
+        return Cola2Starwars;
+    }
+
+    public void setCola2Starwars(JTextArea Cola2Starwars) {
+        this.Cola2Starwars = Cola2Starwars;
+    }
+
+    public JTextArea getCola3Startrek() {
+        return Cola3Startrek;
+    }
+
+    public void setCola3Startrek(JTextArea Cola3Startrek) {
+        this.Cola3Startrek = Cola3Startrek;
+    }
+
+    public JTextArea getCola3Starwars() {
+        return Cola3Starwars;
+    }
+
+    public void setCola3Starwars(JTextArea Cola3Starwars) {
+        this.Cola3Starwars = Cola3Starwars;
+    }
+
+    public JTextArea getColaRefuerzosStartrek() {
+        return ColaRefuerzosStartrek;
+    }
+
+    public void setColaRefuerzosStartrek(JTextArea ColaRefuerzosStartrek) {
+        this.ColaRefuerzosStartrek = ColaRefuerzosStartrek;
+    }
+
+    public JTextArea getColaRefuerzosStarwars() {
+        return ColaRefuerzosStarwars;
+    }
+
+    public void setColaRefuerzosStarwars(JTextArea ColaRefuerzosStarwars) {
+        this.ColaRefuerzosStarwars = ColaRefuerzosStarwars;
+    }
+
+    public JLabel getDesicionCombate() {
+        return DesicionCombate;
+    }
+
+    public void setDesicionCombate(JLabel DesicionCombate) {
+        this.DesicionCombate = DesicionCombate;
+    }
+
+    public JLabel getEstadoIA() {
+        return EstadoIA;
+    }
+
+    public void setEstadoIA(JLabel EstadoIA) {
+        this.EstadoIA = EstadoIA;
+    }
+
+    public JLabel getImagenST() {
+        return ImagenST;
+    }
+
+    public void setImagenST(JLabel ImagenST) {
+        this.ImagenST = ImagenST;
+    }
+
+    public JLabel getImagenSW() {
+        return ImagenSW;
+    }
+
+    public void setImagenSW(JLabel ImagenSW) {
+        this.ImagenSW = ImagenSW;
+    }
+
+    public JLabel getNombreST() {
+        return NombreST;
+    }
+
+    public void setNombreST(JLabel NombreST) {
+        this.NombreST = NombreST;
+    }
+
+    public JLabel getNombreSW() {
+        return NombreSW;
+    }
+
+    public void setNombreSW(JLabel NombreSW) {
+        this.NombreSW = NombreSW;
+    }
+
+    public JLabel getResultadoST() {
+        return ResultadoST;
+    }
+
+    public void setResultadoST(JLabel ResultadoST) {
+        this.ResultadoST = ResultadoST;
+    }
+
+    public JLabel getResultadoSW() {
+        return ResultadoSW;
+    }
+
+    public void setResultadoSW(JLabel ResultadoSW) {
+        this.ResultadoSW = ResultadoSW;
+    }
+
+    public JLabel getVictoriasST() {
+        return VictoriasST;
+    }
+
+    public void setVictoriasST(JLabel VictoriasST) {
+        this.VictoriasST = VictoriasST;
+    }
+
+    public JLabel getVictoriasSW() {
+        return VictoriasSW;
+    }
+
+    public void setVictoriasSW(JLabel VictoriasSW) {
+        this.VictoriasSW = VictoriasSW;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public void setjComboBox1(JComboBox<String> jComboBox1) {
+        this.jComboBox1 = jComboBox1;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JScrollPane getjScrollPane3() {
+        return jScrollPane3;
+    }
+
+    public void setjScrollPane3(JScrollPane jScrollPane3) {
+        this.jScrollPane3 = jScrollPane3;
+    }
+
+    public JScrollPane getjScrollPane4() {
+        return jScrollPane4;
+    }
+
+    public void setjScrollPane4(JScrollPane jScrollPane4) {
+        this.jScrollPane4 = jScrollPane4;
+    }
+
+    public JScrollPane getjScrollPane5() {
+        return jScrollPane5;
+    }
+
+    public void setjScrollPane5(JScrollPane jScrollPane5) {
+        this.jScrollPane5 = jScrollPane5;
+    }
+
+    public JScrollPane getjScrollPane6() {
+        return jScrollPane6;
+    }
+
+    public void setjScrollPane6(JScrollPane jScrollPane6) {
+        this.jScrollPane6 = jScrollPane6;
+    }
+
+    public JScrollPane getjScrollPane7() {
+        return jScrollPane7;
+    }
+
+    public void setjScrollPane7(JScrollPane jScrollPane7) {
+        this.jScrollPane7 = jScrollPane7;
+    }
+
+    public JScrollPane getjScrollPane8() {
+        return jScrollPane8;
+    }
+
+    public void setjScrollPane8(JScrollPane jScrollPane8) {
+        this.jScrollPane8 = jScrollPane8;
+    }
+
+    
+    
+    
+    
+    
+   
 }

@@ -5,6 +5,7 @@
 package Clases;
 
 import Clases.ColasPrioridad;
+import Interfaz.Menu;
 import static java.lang.Thread.sleep;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,7 +26,7 @@ public class IA {
     public IA() {
         this.victoriasStarwars = 0;
         this.victoriasStartrek = 0;
-        this.segundosPorCombate = 10;
+        this.segundosPorCombate = 3;
     }
     
     
@@ -36,7 +37,9 @@ public class IA {
     
     tener un random para desempate!
     */
-    public void combate(ColasPrioridad cola, Personajes personaje1, Personajes personaje2) throws InterruptedException{
+    public void combate(ColasPrioridad cola, Personajes personaje1, Personajes personaje2, Menu frame) throws InterruptedException{
+        
+        frame.getDesicionCombate().setText("...");
         
         aumentarInanicion(cola);
         
@@ -199,6 +202,7 @@ public class IA {
                 
                 //anade a la cola de ganador
                 this.ganadoresStarwars.add(personaje1);
+                frame.getDesicionCombate().setText("Gana: "+personaje1.getNombre()+"!");
             }
             
             else if(puntosDados1 < puntosDados2){ //gano startrek
@@ -210,6 +214,7 @@ public class IA {
                 
                 //anade a la cola de ganador
                 this.ganadoresStartrek.add(personaje2);
+                frame.getDesicionCombate().setText("Gana: "+personaje2.getNombre()+"!");
                 
             }else{//Empataron el combate!! casi imposible
                 int dadoFinal = (int)(Math.random()*2+1);
@@ -228,6 +233,7 @@ public class IA {
                     
                     //anade a la cola de ganador
                     this.ganadoresStarwars.add(personaje1);
+                    frame.getDesicionCombate().setText("Gana: "+personaje1.getNombre()+"!");
                     
                 }else{//gano startrek
                     this.victoriasStartrek ++;
@@ -238,6 +244,7 @@ public class IA {
             
                     //anade a la cola de ganador
                     this.ganadoresStartrek.add(personaje2);
+                    frame.getDesicionCombate().setText("Gana: "+personaje2.getNombre()+"!");
                 }
             }
             
@@ -257,7 +264,7 @@ public class IA {
             //Se colocan al final de la cola de prioridad 1 para que vuelvan a pelear!
             cola.cola1Starwars.add(personaje1);
             cola.cola1Startrek.add(personaje2); 
-            
+            frame.getDesicionCombate().setText("Empate!");
         }
         
         
@@ -269,6 +276,7 @@ public class IA {
             //Se encolan en la cola de refuerzos porque no estan listos para el combate!
             cola.colaRefuerzoStarwars.add(personaje1);
             cola.colaRefuerzoStartrek.add(personaje2); 
+            frame.getDesicionCombate().setText("Se anula el combate!");
         }
         
         
