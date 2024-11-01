@@ -218,7 +218,7 @@ public class Menu extends javax.swing.JFrame {
         EstadoIA.setText("ESTADO DE LA IA");
         jPanel1.add(EstadoIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 240, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Fondo proy.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Fondo proy F.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1200, 700));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 700));
